@@ -53,7 +53,7 @@ const handleMessage = (message, client) => {
 const handleReady = (client) => {
   logger.info('Connected to Discord! - Ready.');
   updatePresence(client);
-
+  console.log(client.user.id);
   client.guilds.each((guild) => {
     guild.ttsPlayer = new TTSPlayer(guild);
   });
